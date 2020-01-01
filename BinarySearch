@@ -1,0 +1,31 @@
+public class BinarySearch {
+		    public static void main(String[] args) {
+		        int[] arr = { 6, 14, 17, 24, 25, 36, 37,48, 59 };
+		        binarySearch(48, arr);
+		    }
+		 
+		    public static void binarySearch(int iKey, int arr[]) {
+		        int mid;
+		        int left = 0;
+		        int right = arr.length - 1;
+		 
+		        while (right >= left) {
+		            mid = (right + left) / 2;
+		 
+		            if (iKey == arr[mid]) {
+		                System.out.println(iKey +"를"+ (mid+1) + "번째 위치에서 찾았습니다");
+		                break;
+		            }
+		 
+		            if (iKey < arr[mid]) {
+		                right = mid - 1;
+		            } else {
+		                left = mid + 1;
+		            }
+		 
+		        }
+		    }
+		
+	}
+
+
